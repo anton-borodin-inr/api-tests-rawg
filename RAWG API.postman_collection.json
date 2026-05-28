@@ -1,0 +1,163 @@
+{
+  "info": {
+    "_postman_id": "2ef6a2f9-59f5-41c8-8e9b-70ca176ce6d0",
+    "name": "RAWG API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "55291487",
+    "_collection_link": "https://go.postman.co/collection/55291487-2ef6a2f9-59f5-41c8-8e9b-70ca176ce6d0?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Get game list",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/games?key={{api_key}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "games"
+          ],
+          "query": [
+            {
+              "key": "key",
+              "value": "{{api_key}}"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Search games by name",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/games?key={{api_key}}&search=witcher",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "games"
+          ],
+          "query": [
+            {
+              "key": "key",
+              "value": "{{api_key}}"
+            },
+            {
+              "key": "search",
+              "value": "witcher"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get game details by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/games/3498?key={{api_key}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "games",
+            "3498"
+          ],
+          "query": [
+            {
+              "key": "key",
+              "value": "{{api_key}}"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get platforms list",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/platforms?key={{api_key}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "platforms"
+          ],
+          "query": [
+            {
+              "key": "key",
+              "value": "{{api_key}}"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get PC games (paginated)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/games?key={{api_key}}&platforms=4&page_size=5",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "games"
+          ],
+          "query": [
+            {
+              "key": "key",
+              "value": "{{api_key}}"
+            },
+            {
+              "key": "platforms",
+              "value": "4"
+            },
+            {
+              "key": "page_size",
+              "value": "5"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Negative - invalid key",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/games/abc?key=invalid_key_xyz",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "games",
+            "abc"
+          ],
+          "query": [
+            {
+              "key": "key",
+              "value": "invalid_key_xyz"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
