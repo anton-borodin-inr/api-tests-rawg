@@ -21,3 +21,6 @@ venv/
 
 # Secrets
 .env
+
+# allure
+allure-results/
