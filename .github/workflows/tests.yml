@@ -18,7 +18,7 @@ jobs:
         run: pytest --alluredir=allure-results
       - name: Upload Allure results
         if: always()
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: allure-results
           path: allure-results/

@@ -3,6 +3,7 @@ import pytest
 import allure
 
 pytestmark = [allure.epic("RAWG API Tests"), allure.feature("Negative scenarios")]
+# Auth negative tests use raw requests because api_client always sends a valid API key.
 
 @pytest.mark.regression
 @pytest.mark.negative
